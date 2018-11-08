@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+// import './App.less';
 
 import Home from './page/Home';
+import Layout from './common/layout/Layout';
 
-import './App.less';
-
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div>
-          <p>header</p>
-          <Route path="/" exact component={Home}/>
-        </div>
-      </Router>
-    );
-  }
+export default class App extends React.Component {
+    render() {
+        return (
+            <Layout>
+                <Switch>
+                    <Route path="/" component={Home} />
+                </Switch>
+            </Layout>
+        );
+    }
 }
-
-export default App;
