@@ -2,8 +2,8 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 // import './App.less';
 
-import Home from './page/Home';
 import Layout from './common/layout/Layout';
+import Home from './page/home/Home';
 
 export default class App extends React.Component {
     render() {
