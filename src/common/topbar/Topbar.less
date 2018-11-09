@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    transition: background-color .8s, opacity .5s;
+    transition: background-color .8s, opacity .8s;
     .logo {
         font-size: 28px;
         margin-left: 50px;
@@ -70,6 +70,35 @@
                     background: @gold;
                 }
             }
+        }
+    }
+    &.hidden {
+        opacity: 0;
+    }
+    @media screen and (max-width: 750px) {
+        padding-top: 0;
+        padding-bottom: 5px;
+        height: 52px;
+        background: #000;
+        opacity: .9;
+        .logo {
+            font-size: 20px;
+            margin-left: 30px;
+            letter-spacing: 4px;
+            color: @gold;
+        }
+        .menu-btn {
+            margin-right: 30px;
+            span {
+                background: @gold;
+                &:before,
+                &:after {
+                    background: @gold;
+                }
+            }
+        }
+        &.hidden {
+            opacity: 0;
         }
     }
 }

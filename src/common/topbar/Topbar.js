@@ -7,22 +7,24 @@ export default class Topbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: false
+            showType: 0 // 0-init, 1-active, 2-hidden
         }
     }
 
     componentDidMount() {
         window.addEventListener('scroll', e => {
             let top = document.documentElement.scrollTop;
-            if (top > 1 && top < 500) {
-                if (!this.state.active) {
-                    this.setState({
-                        active: true
-                    });
-                }
-            } else if (this.state.active) {
+            if (top <= 1 && this.state.showType !== 0) {
                 this.setState({
-                    active: false
+                    showType: 0
+                });
+            } else if (top > 1 && top < 500 && this.state.showType !== 1) {
+                this.setState({
+                    showType: 1
+                });
+            } else if (top >= 500 && this.state.showType !== 2) {
+                this.setState({
+                    showType: 2
                 });
             }
         });
@@ -34,7 +36,10 @@ export default class Topbar extends React.Component {
 
     render() {
         return (
-            <div className={`top-bar ${this.state.active ? 'active' : ''}`}>
+            <div className={`top-bar
+                ${this.state.showType === 1 ? ' active' : ''}
+                ${this.state.showType === 2 ? ' hidden' : ''}
+            `}>
                 <Link to={'/'} className="logo">HENRYLULU</Link>
                 <a className="menu-btn">
                     <span></span>
