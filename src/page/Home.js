@@ -5,9 +5,10 @@ export default class Home extends React.Component {
     render() {
         return (
             <div style={{
-                height: '3000px'
+                height: '3000px',
+                paddingTop: '100px'
             }}>
-                home
+                主页
             </div>
         );
     }

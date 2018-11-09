@@ -41,7 +41,7 @@ export default class Topbar extends React.Component {
                 ${this.state.showType === 2 ? ' hidden' : ''}
             `}>
                 <Link to={'/'} className="logo">HENRYLULU</Link>
-                <a className="menu-btn">
+                <a className="menu-btn" onClick={this.props.onNavOpen}>
                     <span></span>
                 </a>
             </div>
