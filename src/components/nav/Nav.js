@@ -31,25 +31,29 @@ export default class Nav extends React.Component {
             <div className={`nav ${this.props.active ? ' active' : ''}`}
                 // display:none会重绘，所以“出现”的transition不会触发
                 style={{height: this.state.hardHidden ? '0' : '100%'}}
+                onClick={this.props.onClose}
             >
                 <div className="top-bar">
                     <Link to={'/'} className="logo">HENRYLULU</Link>
-                    <a className="menu-btn" onClick={this.props.onClose}>
+                    <a className="menu-btn">
                         <span></span>
                     </a>
                 </div>
                 <ul className="link-list">
                     <li>
-                        <Link to={'/'}>CODE</Link>
+                        <Link to={'/'}>HOME</Link>
                     </li>
                     <li>
-                        <Link to={'/'}>BLOG</Link>
+                        <Link to={'/about'}>ABOUT</Link>
                     </li>
                     <li>
-                        <Link to={'/'}>RESUME</Link>
+                        <Link to={'/code'}>CODE</Link>
                     </li>
                     <li>
-                        <Link to={'/'}>CONNECT</Link>
+                        <Link to={'/blog'}>BLOG</Link>
+                    </li>
+                    <li>
+                        <Link to={'/connect'}>CONNECT</Link>
                     </li>
                 </ul>
             </div>

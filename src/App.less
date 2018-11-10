@@ -1,0 +1,59 @@
+@import './common/style/fontface/FontFace.less';
+@import './common/style/reset.less';
+@import './common/style/pc.less';
+@import './common/style/wap.less';
+
+@dark: #2e2925;
+@light: #ebe8e5;
+@gold: #b6a269;
+
+body {
+    font-size: .16rem;
+    font-family: PingFangSC-Regular, "\5FAE\8F6F\96C5\9ED1", "Hiragino Sans GB",arial
+}
+body.clip {
+    overflow: hidden;
+}
+
+h3 {
+    font-size: .2rem;
+}
+
+p {
+    font-size: .16rem;
+}
+
+.gold {
+    color: @gold;
+}
+
+.btn-wrapper {
+    display: block;
+    margin-top: .4rem;
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    width: 2.14rem;
+    height: .46rem;
+    margin: .15rem;
+    border: .03rem solid #000000;
+    line-height: .46rem;
+    font-size: .2rem;
+    text-align: center;
+    transition: background-color .2s, color .2s;
+    &:hover,
+    &.emb {
+        background: #000000;
+        color: #ffffff;
+    }
+}
+.btn.btn-black {
+    border-color: #ffffff;
+    color: #ffffff;
+    &:hover,
+    &.emb {
+        background: #ffffff;
+        color: #000000;
+    }
+}

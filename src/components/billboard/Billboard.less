@@ -1,0 +1,25 @@
+@gold: #b6a269;
+
+.billboard {
+    padding: .5rem .8rem;
+    text-align: center;
+    color: #000000;
+    .bb-subtitle {
+        color: @gold;
+        padding-bottom: .35rem;
+    }
+    .bb-title {
+        color: #000000;
+        padding-bottom: .4rem;
+    }
+    &.light {
+        background: #ffffff;
+    }
+    &.dark {
+        background: #000000;
+        color: #ffffff;
+        .bb-title {
+            color: @gold;
+        }
+    }
+}

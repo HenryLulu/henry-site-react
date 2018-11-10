@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 import store from './reducers/store';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
-import './index.less';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
