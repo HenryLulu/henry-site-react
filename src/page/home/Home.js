@@ -72,7 +72,7 @@ export default class Home extends React.Component {
                             lan="CSS"
                             desc="cssssssssss"
                             link="https://github.com/HenryLulu"
-                            img="https://avatars1.githubusercontent.com/u/14797054?s=460&v=4"
+                            img="https://avatars1.githubusecontent.com/u/14797054?s=460&v=4"
                         ></Boxcode>
                         <Boxcode
                             name="css-icon"

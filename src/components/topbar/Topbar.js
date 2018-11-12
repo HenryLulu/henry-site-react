@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import $ from 'jquery';
 
 import './Topbar.less';
 
@@ -12,8 +13,8 @@ export default class Topbar extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', e => {
-            let top = document.documentElement.scrollTop;
+        $(window).on('scroll', () => {
+            let top = $(document).scrollTop();
             if (top <= 1 && this.state.showType !== 0) {
                 this.setState({
                     showType: 0
@@ -31,7 +32,7 @@ export default class Topbar extends React.Component {
     }
 
     componentBeforeUnmount() {
-        window.removeEventListener('scroll');
+        $(window).off('scroll');
     }
 
     render() {
