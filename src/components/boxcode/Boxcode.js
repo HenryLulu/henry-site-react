@@ -23,7 +23,8 @@ export default ({name, lan, desc, link, img}) => (
                 {name ? (<p className="name">{name}</p>) : ''}
                 {lan ? (<p className="lan">@ {lan}</p>) : ''}
                 {desc && !img ? (<p className="desc">{desc}</p>) : ''}
-                <p className="github"></p>
+                {/* <p className="github"></p> */}
+                <i className="anticon icon-github"></i>
             </div>
         </a>
     </Box>
