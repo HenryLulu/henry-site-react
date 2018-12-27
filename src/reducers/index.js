@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import page from './page/page';
+import codes from './code/codes';
 
 export default combineReducers({
-    page
+    codes
 });

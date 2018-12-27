@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import store from './reducers/store';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {HashRouter as Router} from "react-router-dom";
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';

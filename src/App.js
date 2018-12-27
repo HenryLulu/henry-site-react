@@ -1,9 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {Route, Link} from "react-router-dom";
 // import './App.less';
 
 import Layout from './components/layout/Layout';
 import Home from './page/home/Home';
+import Blog from './page/blog/Blog';
 
 import './App.less';
 
@@ -12,6 +13,7 @@ export default class App extends React.Component {
         return (
             <Layout>
                 <Route path="/" exact component={Home} />
+                <Route path="/blog" component={Blog} />
             </Layout>
         );
     }
