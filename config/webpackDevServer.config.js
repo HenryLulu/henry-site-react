@@ -82,7 +82,15 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    proxy: {
+      "/api/github": {
+        "target": "https://api.github.com",
+        "changeOrigin": true,
+        "pathRewrite": {
+          "^/api/github": ""
+        }
+      }
+    },
     before(app, server) {
       if (fs.existsSync(paths.proxySetup)) {
         // This registers user provided middleware for proxy reasons

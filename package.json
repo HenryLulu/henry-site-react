@@ -132,21 +132,5 @@
     "@babel/plugin-proposal-decorators": "^7.2.3",
     "less": "^3.8.1",
     "less-loader": "^4.1.0"
-  },
-  "proxy": {
-    "/github/*": {
-      "target": "https://api.github.com",
-      "changeOrigin": true,
-      "pathRewrite": {
-        "^/github": ""
-      }
-    },
-    "^/*": {
-      "target": "http://cp01-wkqa-test02.epc.baidu.com:8280",
-      "changeOrigin": true,
-      "pathRewrite": {
-        "^/wisdom/proxy": ""
-      }
-    }
   }
 }
