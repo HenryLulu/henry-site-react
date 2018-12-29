@@ -20,8 +20,41 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 0;
-            height: .46rem;
+            width: .7rem;
+            height: .65rem;
+            border-top-left-radius: 50% .2rem;
+            border-top-right-radius: 50% .2rem;
+            background: @gold;
+            box-shadow: -.7rem 0 0 0 @gold, .7rem 0 0 0 @gold;
+            animation: run1 .6s linear infinite;
+        }
+        @keyframes run1 {
+            from {
+                left: 0;
+            }
+            to {
+                left: .7rem;
+            }
+        }
+        .coffee-2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: .8rem;
+            height: .55rem;
+            border-top-left-radius: 50% .2rem;
+            border-top-right-radius: 50% .2rem;
+            background: @dark;
+            box-shadow: -.8rem 0 0 0 @dark, .8rem 0 0 0 @dark;
+            animation: run2 .4s linear infinite;
+        }
+        @keyframes run2 {
+            from {
+                left: 0;
+            }
+            to {
+                left: .8rem;
+            }
         }
     }
     .cup {
