@@ -44,13 +44,13 @@ export default class Nav extends React.Component {
                         <Link to={'/'}>HOME</Link>
                     </li>
                     <li>
-                        <Link to={'/about'}>ABOUT</Link>
-                    </li>
-                    <li>
-                        <Link to={'/code'}>CODE</Link>
-                    </li>
-                    <li>
                         <Link to={'/blog'}>BLOG</Link>
+                    </li>
+                    <li>
+                        <a href="https://github.com/HenryLulu" target="_blank">CODE</a>
+                    </li>
+                    <li>
+                        <Link to={'/about'}>ABOUT</Link>
                     </li>
                     <li>
                         <Link to={'/connect'}>CONNECT</Link>

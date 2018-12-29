@@ -9,7 +9,6 @@ import BillBoard from '../../components/billboard/Billboard';
 import Boxcontainer from '../../components/boxcontainer/Boxcontainer';
 
 import './Home.less';
-import Box from '../../components/box/Box';
 import Boxblog from '../../components/boxblog/Boxblog';
 import Boxcode from '../../components/boxcode/Boxcode';
 
@@ -28,7 +27,10 @@ class Home extends React.Component {
     componentDidMount() {
         const dispatch = this.props.dispatch;
         dispatch(getCodes());
-        dispatch(getBloglist());
+        dispatch(getBloglist({
+            per_page: 8,
+            page: 1
+        }));
     }
 
     render() {
@@ -47,6 +49,18 @@ class Home extends React.Component {
                 </div>
                 <div className="box-area">
                     <Boxcontainer>
+                        {this.props.bloglist.slice(0, 4).map(blog => {
+                            return (
+                                <Boxblog
+                                    key={blog.id}
+                                    tag={blog.tag}
+                                    title={blog.title}
+                                    desc={blog.desc}
+                                    link={blog.link}
+                                    img={blog.img}
+                                ></Boxblog>
+                            );
+                        })}
                         {this.props.codes.filter(code => {
                             return SHOW.indexOf(code.name) > -1;
                         }).map(code => {
@@ -61,7 +75,7 @@ class Home extends React.Component {
                                 ></Boxcode>
                             );
                         })}
-                        {this.props.bloglist.map(blog => {
+                        {this.props.bloglist.slice(4).map(blog => {
                             return (
                                 <Boxblog
                                     key={blog.id}
@@ -75,12 +89,12 @@ class Home extends React.Component {
                         })}
                     </Boxcontainer>
                     <div className="btn-wrapper">
-                        <Link to="/code">
-                            <p className="btn">SHOW U MY CODE</p>
-                        </Link>
                         <Link to="/blog">
-                            <p className="btn emb">BLOG</p>
+                            <p className="btn">BLOG</p>
                         </Link>
+                        <a href="https://github.com/HenryLulu" target="_blank">
+                            <p className="btn emb">SHOW U MY CODE</p>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 @gold: #b6a269;
 
 .footer {
+    position: relative;
     padding: .4rem;
     background: #000000;
     color: @gold;
@@ -23,5 +24,17 @@
     .icons {
         font-size: .25rem;
         letter-spacing: .1rem;        
+    }
+    .top {
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+        position: absolute;
+        top: .5rem;
+        right: 1rem;
+        cursor: pointer;
+        .anticon {
+            font-size: .5rem;
+        }
     }
 }
