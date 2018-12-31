@@ -2,13 +2,14 @@
 @light: #ebe8e5;
 @gold: #b6a269;
 
-.loading {
+.loader {
     position: relative;
     width: 1.3rem;
     margin: 0 auto;
+    cursor: pointer;
     .coffee {
         position: absolute;
-        z-index: 1000;
+        z-index: 1;
         top: .08rem;
         right: .08rem;
         bottom: .08rem;
@@ -16,6 +17,8 @@
         background: @light;
         border-radius: 0 0 .08rem .08rem;
         overflow: hidden;
+    }
+    .coffee.loading {
         .coffee-1 {
             position: absolute;
             left: 0;
@@ -54,6 +57,35 @@
             }
             to {
                 left: .8rem;
+            }
+        }
+    }
+    .coffee.failed {
+        .retry {
+            position: relative;
+            margin: .3rem auto;
+            width: .4rem;
+            height: .4rem;
+            border: .08rem solid @dark;
+            border-radius: 50%;
+            &:before {
+                content: '';
+                position: absolute;
+                left: .2rem;
+                bottom: .2rem;
+                width: .5rem;
+                height: .5rem;
+                background: @light;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: .2rem;
+                top: -.14rem;
+                width: 0;
+                height: 0;
+                border: .1rem solid;
+                border-color: transparent transparent transparent @dark;
             }
         }
     }

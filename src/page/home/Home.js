@@ -11,6 +11,7 @@ import Boxcontainer from '../../components/boxcontainer/Boxcontainer';
 import './Home.less';
 import Boxblog from '../../components/boxblog/Boxblog';
 import Boxcode from '../../components/boxcode/Boxcode';
+import Loading from '../../components/loading/Loading';
 
 const SHOW = ['css-icons', 'css-draw', 'video-to-text-ocr-demo', 'henry-site-react'];
 
@@ -47,9 +48,16 @@ class Home extends React.Component {
                         </Link>
                     </div>
                 </div>
+                {this.props.bloglist.list.length === 0 && this.props.codes.length === 0
+                && <div className="loading-wrapper" style={{padding: '1rem 0'}}>
+                    <Loading
+                        status={this.props.bloglist.status}
+                        onRetry={this.list}
+                    />
+                </div>}
                 <div className="box-area">
                     <Boxcontainer>
-                        {this.props.bloglist.slice(0, 4).map(blog => {
+                        {this.props.bloglist.list.slice(0, 4).map(blog => {
                             return (
                                 <Boxblog
                                     key={blog.id}
@@ -75,7 +83,7 @@ class Home extends React.Component {
                                 ></Boxcode>
                             );
                         })}
-                        {this.props.bloglist.slice(4).map(blog => {
+                        {this.props.bloglist.list.slice(4).map(blog => {
                             return (
                                 <Boxblog
                                     key={blog.id}

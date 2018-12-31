@@ -1,13 +1,14 @@
 import React from 'react';
 import './Loading.less';
 
-export default ({status}) => (
-    <div className={`loading ${status}`}>
-        <p className="cup">
-            <div className="coffee">
+export default ({status, onRetry}) => (
+    <div className="loader" onClick={() => {status === 'failed' && onRetry();}}>
+        <div className="cup">
+            <div className={`coffee ${status}`}>
                 <p className="coffee-1"></p>
                 <p className="coffee-2"></p>
+                <p className="retry"></p>
             </div>
-        </p>
+        </div>
     </div>
 );

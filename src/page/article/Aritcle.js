@@ -20,6 +20,10 @@ class Article extends React.Component {
     }
     
     componentDidMount() {
+        this.getData();
+    }
+
+    getData = () => {
         const dispatch = this.props.dispatch;
         dispatch(getArticle(this.props.match.params.id));
     }
@@ -27,9 +31,10 @@ class Article extends React.Component {
     render() {
         return (
             <div className="article">
-                {this.props.article.status !== 'loading' && <div className="loading-wrapper">
+                {this.props.article.status !== 'succeed' && <div className="loading-wrapper">
                     <Loading
                         status={this.props.article.status}
+                        onRetry={this.getData}
                     />
                 </div>}
                 {this.props.article.status === 'succeed' && <div className="main">

@@ -48,14 +48,23 @@ export const bloglist = createAction('BLOG_LIST', (data) => (data));
 export const getBloglist = param => (dispatch, getState) => {
     // 请求前获取当前Id
     const curGetBloglistId = ++getBloglistId;
-    dispatch(bloglist([]));
-    return fetchBloglist(param).then(res => {
+    dispatch(bloglist({
+        status: 'loading',
+        list: []
+    }));
+    fetchBloglist(param).then(res => {
         // 待请求返回，比较本次请求Id和全局请求Id，如果相同则为最新请求
         if (curGetBloglistId === getBloglistId) {
-            dispatch(bloglist(res));
+            dispatch(bloglist({
+                status: 'succeed',
+                list: res || []
+            }));
         }
     }).catch(e => {
-        console.warn(e);
+        dispatch(bloglist({
+            status: 'failed',
+            list: []
+        }));
     });
 };
 

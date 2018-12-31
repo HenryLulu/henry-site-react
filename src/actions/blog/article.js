@@ -21,6 +21,7 @@ export const getArticle = id => (dispatch, getState) => {
                 ...blog,
                 tag,
                 status: 'succeed'
+                // status: 'failed'
             }));
         } catch (e) {
             console.error(e);
