@@ -17,8 +17,9 @@ export default class extends React.Component {
                 <div className="wrapper m1">
                     {this.state.m1page === 1 && (
                         <div className="p1">
-                            <h1 className="title">尝试+兴趣=前端</h1>
-                            <h1 className="title"></h1>
+                            <h1 className="title">我怎么做上前端的？</h1>
+                            <h1 className="title">然后呢？</h1>
+                            <h1 className="title link">ANSWER</h1>
                         </div>
                     )}
                 </div>
