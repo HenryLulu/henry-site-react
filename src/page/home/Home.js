@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import {getCodes} from '../../actions/code/codes';
 import {getBloglist} from '../../actions/blog/bloglist';
 
-import BillBoard from '../../components/billboard/Billboard';
 import Boxcontainer from '../../components/boxcontainer/Boxcontainer';
 
 import './Home.less';
