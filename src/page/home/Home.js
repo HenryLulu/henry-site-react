@@ -25,6 +25,10 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
+        this.list();
+    }
+
+    list = () => {
         const dispatch = this.props.dispatch;
         dispatch(getCodes());
         dispatch(getBloglist({
@@ -43,7 +47,7 @@ class Home extends React.Component {
                     <h3 className="l4 gold">百度前端工程师</h3>
                     <div className="btn-wrapper">
                         <Link to="/about">
-                            <p className="btn">MORE ABOUT ME</p>
+                            <p className="btn btn-en">MORE ABOUT ME</p>
                         </Link>
                     </div>
                 </div>
@@ -97,10 +101,10 @@ class Home extends React.Component {
                     </Boxcontainer>
                     <div className="btn-wrapper">
                         <Link to="/blog">
-                            <p className="btn">BLOG</p>
+                            <p className="btn btn-en">BLOG</p>
                         </Link>
                         <a href="https://github.com/HenryLulu" target="_blank">
-                            <p className="btn emb">SHOW U MY CODE</p>
+                            <p className="btn emb btn-en">SHOW U MY CODE</p>
                         </a>
                     </div>
                 </div>

@@ -112,7 +112,7 @@ class Blog extends React.Component {
                 && (
                     <div className="btn-wrapper" style={{marginBottom: '.3rem'}}>
                         <a href="javascript:;">
-                            <p className="btn" onClick={this.handleMore}>LOAD MORE</p>
+                            <p className="btn btn-en" onClick={this.handleMore}>LOAD MORE</p>
                         </a>
                     </div>
                 )}

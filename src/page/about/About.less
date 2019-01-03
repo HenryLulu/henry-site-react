@@ -4,12 +4,43 @@
 
 .about {
     padding-top: 1rem;
-    .wrapper {
+    .head {
         padding: .5rem .8rem;
+        @media screen and (max-width: 750px) {
+            padding: .5rem .4rem;
+        }
+        .page {
+            text-align: center;
+            .title {
+                margin-bottom: .4rem;
+                line-height: .68rem;
+                font-size: .6rem;
+                color: #000000;
+                @media screen and (max-width: 750px) {
+                    line-height: .34rem;
+                    font-size: .3rem;
+                }
+            }
+            .link {
+                color: #b6a269;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .text {
+                margin-bottom: .4rem;
+            }
+        }
     }
-    .m1 {
-        .p1 {
-            padding-bottom: .4rem;
+    .edu {
+        .left {
+            @media screen and (max-width: 450px) {
+                padding-bottom: 100%;
+            }
+            background: url('http://5b0988e595225.cdn.sohucs.com/images/20181108/4c817556068b4b9884740a736d1949b0.jpeg') no-repeat center center;
+            background-size: auto 100%;
+        }
+        .right {
+            padding: .5rem 0;
         }
     }
 }

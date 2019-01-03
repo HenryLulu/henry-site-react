@@ -7,21 +7,69 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            m1page: 1
+            headpage: 1
         };
+    }
+
+    nextPage = () => {
+        this.setState({
+            headpage: this.state.headpage === 3 ? 1 : this.state.headpage + 1
+        });
     }
 
     render() {
         return (
             <div className="about">
-                <div className="wrapper m1">
-                    {this.state.m1page === 1 && (
-                        <div className="p1">
-                            <h1 className="title">我怎么做上前端的？</h1>
-                            <h1 className="title">然后呢？</h1>
-                            <h1 className="title link">ANSWER</h1>
+                <div className="head">
+                    {this.state.headpage === 1 && (
+                        <div className="page">
+                            <h1 className="title">
+                                做前端，靠谱且高效<br/>
+                                前端之外，哪都有我
+                            </h1>
+                            <h1 className="title link" onClick={this.nextPage}>展开说说</h1>
                         </div>
                     )}
+                    {this.state.headpage === 2 && (
+                        <div className="page">
+                            <h1 className="title">做前端，靠谱且高效</h1>
+                            <p className="text">
+                                hi，我是王宏宇，北京科技大学计算机系本科+硕士，有不错的研究和开发能力。<br/>
+                                18年1月正式毕业，但出于热(pin)爱(qiong)，学业空闲的时候一直在实习，毕业后留在了百度。<br/>
+                                前端是我所爱，有扎实的前端基础。接触较广，当前技术栈：ES6 CSS3 React webpack FIS jQuery nodejs。<br/>
+                                曾是个能当正式员工用的实习生，现在是个靠谱高效的正式员工，时常专注到废寝忘食。
+                            </p>
+                            <h1 className="title link" onClick={this.nextPage}>前端之外</h1>
+                        </div>
+                    )}
+                    {this.state.headpage === 3 && (
+                        <div className="page">
+                            <h1 className="title">前端之外，哪都有我</h1>
+                            <p className="text">
+                                产出过生产环境的大数据收集分析平台，会写点python(现在也偶尔写)。<br/>
+                                做过百度贴吧和某国企的PM实习生，能站在产品角度想问题，能和PM好好说话。<br/>
+                                本科做过几年业余设计，包揽学院和校园网站的大部分设计工作，有基本的审美能力，有耐心还原设计稿。<br/>
+                                性格开朗，现在也负责组里的吃喝玩乐。
+                            </p>
+                            <p className="btn" onClick={this.nextPage}>了解了</p>
+                        </div>
+                    )}
+                </div>
+                <div className="block-2-col edu">
+                    <div className="col left"></div>
+                    <div className="col right">
+                        <p className="text-topic">我的大学</p>
+                        <p className="text-title">北京科技大学(本硕)</p>
+                        <p className="text-topic">硕士</p>
+                        <p className="text-title-small">软件工程</p>
+                        <p className="text-text">CNTV网络直播CDN日志收集分析平台</p>
+                        <p className="text-text">Stanford儿童疾病大数据预测及可视化项目</p>
+                        <p className="text-text">NIST《智能电网信息安全指南》翻译组</p>
+                        <p className="text-topic" style={{marginTop: '.4rem'}}>本科</p>
+                        <p className="text-title-small">信息安全</p>
+                        <p className="text-text">iBeiKe首席设计官</p>
+                        <p className="text-text">索思科技协会技术总监</p>
+                    </div>
                 </div>
             </div>
         );

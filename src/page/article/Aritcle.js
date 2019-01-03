@@ -45,7 +45,7 @@ class Article extends React.Component {
                     </div>
                     <div className="btn-wrapper">
                         <Link to="/blog">
-                            <p className="btn">BLOG</p>
+                            <p className="btn btn-en">BLOG</p>
                         </Link>
                     </div>
                 </div>}
