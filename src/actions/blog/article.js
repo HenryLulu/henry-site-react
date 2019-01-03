@@ -1,5 +1,4 @@
 import get from '../fetch';
-import githubConfig from '../../config/github';
 
 import {createAction} from 'redux-actions';
 
@@ -9,9 +8,7 @@ export const getArticle = id => (dispatch, getState) => {
     dispatch(article({
         status: 'loading'
     }));
-    get(`/api/github/repos/HenryLulu/blog/issues/${id}`, {
-        access_token: githubConfig.access_token
-    }).then(blog => {
+    get(`/api/github/repos/HenryLulu/blog/issues/${id}`).then(blog => {
         try {
             let tag = blog.created_at.split('T')[0];
             if (blog.labels.length > 0) {

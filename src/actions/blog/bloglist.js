@@ -1,5 +1,4 @@
 import get from '../fetch';
-import githubConfig from '../../config/github';
 
 import {createAction} from 'redux-actions';
 
@@ -17,7 +16,6 @@ const fetchBloglist = (param = {}) => {
         labels = ''
     } = param;
     return get('/api/github/repos/HenryLulu/blog/issues', {
-        access_token: githubConfig.access_token,
         filter: 'created',
         per_page,
         page,
