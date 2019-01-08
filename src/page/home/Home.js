@@ -43,7 +43,7 @@ class Home extends React.Component {
                 <div className="head">
                     <h1 className="l1">王宏宇</h1>
                     <h1 className="l2">NOT ONLY A CODER</h1>
-                    <p className="l3">不止于代码，热衷于前端，专注于效率，执着于体验</p>
+                    <p className="l3">热衷于前端，不止于代码，专注于效率，执着于体验</p>
                     <h3 className="l4 gold">百度前端工程师</h3>
                     <div className="btn-wrapper">
                         <Link to="/about">
