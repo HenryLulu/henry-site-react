@@ -24,33 +24,35 @@ export default class extends React.Component {
                     {this.state.headpage === 1 && (
                         <div className="page">
                             <h1 className="title">
-                                做前端，靠谱且高效<br/>
-                                前端之外，哪都有我
+                                我曾经很瘦<br/>
+                                现在胖了
                             </h1>
                             <h1 className="title link" onClick={this.nextPage}>展开说说</h1>
                         </div>
                     )}
                     {this.state.headpage === 2 && (
                         <div className="page">
-                            <h1 className="title">做前端，靠谱且高效</h1>
+                            <h1 className="title">我曾经很瘦</h1>
                             {/* <p className="text">
                                 hi，我是王宏宇，北京科技大学计算机系本科+硕士，有不错的研究和开发能力。<br/>
                                 18年1月正式毕业，但出于热(pin)爱(qiong)，学业空闲的时候一直在实习，毕业后留在了百度。<br/>
                                 前端是我所爱，有扎实的前端基础。接触较广，当前技术栈：ES6 CSS3 React webpack FIS jQuery nodejs。<br/>
                                 曾是个能当正式员工用的实习生，现在是个靠谱高效的正式员工，时常专注到废寝忘食。
                             </p> */}
-                            <h1 className="title link" onClick={this.nextPage}>前端之外</h1>
+                            <p className="text">瘦就是瘦</p>
+                            <h1 className="title link" onClick={this.nextPage}>现在呢</h1>
                         </div>
                     )}
                     {this.state.headpage === 3 && (
                         <div className="page">
-                            <h1 className="title">前端之外，哪都有我</h1>
+                            <h1 className="title">现在胖了</h1>
                             {/* <p className="text">
                                 产出过生产环境的大数据收集分析平台，会写点python(现在也偶尔写)。<br/>
                                 做过百度贴吧和某国企的PM实习生，能站在产品角度想问题，能和PM好好说话。<br/>
                                 本科做过几年业余设计，包揽学院和校园网站的大部分设计工作，有基本的审美能力，有耐心还原设计稿。<br/>
                                 性格开朗，现在也负责组里的吃喝玩乐。
                             </p> */}
+                            <p className="text">胖就是胖</p>
                             <p className="btn" onClick={this.nextPage}>了解了</p>
                         </div>
                     )}
