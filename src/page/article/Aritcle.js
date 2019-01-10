@@ -41,7 +41,7 @@ class Article extends React.Component {
                     <p className="tag">{this.props.article.tag}</p>
                     <p className="title">{this.props.article.title}</p>
                     <div className="reader">
-                        <Markdown source={this.props.article.body.replace(/↵/g, '↵↵')} />
+                        <Markdown source={this.props.article.body} />
                     </div>
                     <div className="btn-wrapper">
                         <Link to="/blog">

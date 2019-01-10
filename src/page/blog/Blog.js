@@ -96,7 +96,7 @@ class Blog extends React.Component {
                     />
                 </div>}
                 {this.props.bloglist.status === 'succeed' && <Boxcontainer>
-                    {this.props.bloglist.list.slice(0, 4).map(blog => (
+                    {this.props.bloglist.list.map(blog => (
                         <Boxblog
                             key={blog.id}
                             tag={blog.tag}
