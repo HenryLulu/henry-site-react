@@ -8,7 +8,9 @@ export const getLabellist = (param = {}) => (dispatch, getState) => {
     dispatch(labellist([]));
     get('/api/github/repos/HenryLulu/blog/labels').then(res => {
         try {
-            dispatch(labellist(res.map(label => {
+            dispatch(labellist(res.sort((a, b) => {
+                return a.id - b.id;
+            }).map(label => {
                 return label.name;
             })));
         } catch (e) {
