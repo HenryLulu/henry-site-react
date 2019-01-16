@@ -13,19 +13,21 @@
         }
         display: flex;
         justify-content: center;
-        margin-bottom: .24rem;
+        margin-bottom: .14rem;
         font-size: .16rem;
         line-height: .22rem;
         .filter-title {
+            flex-shrink: 0;
             color: @gold;
             margin: 0 .12rem;
             width: .8rem;
         }
         .filter-list {
             display: flex;
-            overflow: scroll;
+            flex-wrap: wrap;
             .filter-item {
                 margin: 0 .24rem;
+                margin-bottom: 0.1rem;
                 color: @dark;
                 border-bottom: 1px solid transparent;
                 white-space: nowrap;
