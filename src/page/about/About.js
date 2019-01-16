@@ -70,7 +70,7 @@ export default class extends React.Component {
                         <p className="text-topic" style={{marginTop: '.4rem'}}>本科</p>
                         <p className="text-title-small">信息安全</p>
                         <p className="text-text">iBeiKe设计师</p>
-                        <p className="text-text">索思科技协会技术顾问</p>
+                        <p className="text-text">索思科技协会技术支持</p>
                     </div>
                 </div>
             </div>
