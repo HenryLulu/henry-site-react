@@ -2,6 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {HashRouter as Router, Route, Link} from "react-router-dom";
 import store from './reducers/store';
+import ScrollToTopRoute from "react-scroll-to-top-route";
 
 import Layout from './components/layout/Layout';
 import Home from './page/home/Home';
@@ -17,10 +18,10 @@ export default class App extends React.Component {
             <Router>
                 <Provider store={store}>
                     <Layout>
-                        <Route path="/" exact component={Home} />
-                        <Route path="/blog" exact component={Blog} />
-                        <Route path="/article/:id" component={Article} />
-                        <Route path="/about" exact component={About} />
+                        <ScrollToTopRoute path="/" exact component={Home} />
+                        <ScrollToTopRoute path="/blog" exact component={Blog} />
+                        <ScrollToTopRoute path="/article/:id" component={Article} />
+                        <ScrollToTopRoute path="/about" exact component={About} />
                     </Layout>
                 </Provider>
             </Router>
