@@ -9,6 +9,7 @@ import Home from './page/home/Home';
 import Blog from './page/blog/Blog';
 import About from './page/about/About';
 import Article from './page/article/Aritcle';
+import Gallery from './page/gallery/Gallery';
 
 import './App.less';
 
@@ -22,6 +23,7 @@ export default class App extends React.Component {
                         <ScrollToTopRoute path="/blog" exact component={Blog} />
                         <ScrollToTopRoute path="/article/:id" component={Article} />
                         <ScrollToTopRoute path="/about" exact component={About} />
+                        <ScrollToTopRoute path="/gallery" exact component={Gallery} />
                     </Layout>
                 </Provider>
             </Router>

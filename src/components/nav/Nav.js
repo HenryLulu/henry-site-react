@@ -34,7 +34,7 @@ export default class Nav extends React.Component {
                 onClick={this.props.onClose}
             >
                 <div className="top-bar">
-                    <Link to={'/'} className="logo">HENRY HERE</Link>
+                    <Link to={'/'} className="logo">HEY HENRY</Link>
                     <a className="menu-btn">
                         <span></span>
                     </a>
@@ -50,11 +50,14 @@ export default class Nav extends React.Component {
                         <a href="https://github.com/HenryLulu" target="_blank">CODE</a>
                     </li>
                     <li>
-                        <Link to={'/about'}>ABOUT</Link>
+                        <Link to={'/gallery'}>DESIGN</Link>
                     </li>
                     <li>
-                        <Link to={'/connect'}>CONNECT</Link>
+                        <Link to={'/about'}>ABOUT</Link>
                     </li>
+                    {/* <li>
+                        <Link to={'/connect'}>CONNECT</Link>
+                    </li> */}
                 </ul>
             </div>
         );

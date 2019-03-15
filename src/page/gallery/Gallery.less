@@ -1,0 +1,49 @@
+@dark: #2e2925;
+@light: #ebe8e5;
+@gold: #b6a269;
+
+.gallery {
+    margin-top: 1rem;
+    @media screen and (max-width: 750px) {
+        margin-top: .56rem;
+    }
+}
+.gallery-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0;
+    .img-box {
+        position: relative;
+        display: inline-block;
+        margin-bottom: .1rem;
+        cursor: pointer;
+        &:hover .img-mask {
+            opacity: 1;
+        }
+        .img-mask {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: .5rem;
+            background: #000000;
+            transition: opacity .5s;
+            opacity: 0;
+            .img-mask-tag {
+                margin: .03rem 0 .3rem;
+                line-height: .25rem;
+                font-size: .18rem;
+                color: @gold;
+                text-align: center;
+            }
+            .img-mask-title {
+                line-height: .33rem;
+                font-size: .28rem;
+                color: #ffffff;
+                text-align: center;
+            }
+        }
+    }
+}
