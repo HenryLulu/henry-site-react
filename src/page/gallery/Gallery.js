@@ -5,19 +5,19 @@ import './Gallery.less';
 
 const images = [
     {
-        src: 'http://static.chiyuanyuan.com/suosi.jpg',
+        src: 'https://user-images.githubusercontent.com/14797054/54413911-63370d80-4732-11e9-960b-99b0343d4181.png',
         tag: '2013 - 宣传海报 - 北科大',
         title: '索思科技协会招新海报'
     }, {
-        src: 'http://static.chiyuanyuan.com/xinsheng.jpg',
+        src: 'https://user-images.githubusercontent.com/14797054/54413923-7053fc80-4732-11e9-8c2f-cb0a15e8c4cc.png',
         tag: '2012 - 手册封面 - 北科大',
         title: '《2012新生攻略》封面'
     }, {
-        src: 'http://static.chiyuanyuan.com/tshirt.jpg',
+        src: 'https://user-images.githubusercontent.com/14797054/54413904-57e3e200-4732-11e9-8daa-f285cb7cf612.png',
         tag: '2012 - 产品周边 - iBeiKe',
         title: 'iBeiKe 11周年站庆文化衫（销量No.1）'
     }, {
-        src: 'http://static.chiyuanyuan.com/zhanqing.jpg',
+        src: 'https://user-images.githubusercontent.com/14797054/54413934-78ac3780-4732-11e9-991b-6843aa18567e.png',
         tag: '2013 - 宣传海报 - iBeiKe',
         title: 'iBeike 12周年站庆海报'
     }
