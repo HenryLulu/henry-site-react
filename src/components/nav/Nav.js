@@ -34,7 +34,7 @@ export default class Nav extends React.Component {
                 onClick={this.props.onClose}
             >
                 <div className="top-bar">
-                    <Link to={'/'} className="logo">HEY HENRY</Link>
+                    <Link to={'/'} className="logo">HEY!HENRY</Link>
                     <a className="menu-btn">
                         <span></span>
                     </a>
