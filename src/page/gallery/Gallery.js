@@ -15,7 +15,7 @@ const images = [
     }, {
         src: 'https://user-images.githubusercontent.com/14797054/54417950-79e36180-473e-11e9-8406-d9adf3b15fe0.png',
         tag: '2012 - 产品周边 - iBeiKe',
-        title: 'iBeiKe 11周年站庆文化衫（销量No.1）'
+        title: 'iBeiKe 11周年站庆文化衫'
     }, {
         src: 'https://user-images.githubusercontent.com/14797054/54417980-92ec1280-473e-11e9-8af1-fdfacc745b81.png',
         tag: '2013 - 宣传海报 - iBeiKe',
@@ -62,6 +62,10 @@ export default class extends React.Component {
 
     render() {
         return <div className="gallery">
+            <div className="gallery-header">
+                <p className="gh-title"> 很久以前，我是个『美工』</p>
+                <p className="gh-desc">现在<br/>『Ｐ图画画』是爱好<br/>『别搞太丑』是本能<br/>『完美还原』是使命</p>
+            </div>
             <div id="gallery-wrapper" className="gallery-wrapper"></div>
         </div>
     }
