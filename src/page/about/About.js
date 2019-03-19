@@ -6,24 +6,28 @@ import './About.less';
 
 const workData = [
     {
+        key: 4,
         logo: 'baidu',
         name: '百度教育',
         time: '2017.4-至今',
         title: '前端工程师',
         desc: 'ToB产品、SaaS、智慧课堂、频道专题'
     }, {
+        key: 3,
         logo: 'dd',
         name: '云丁智能(D轮)',
         time: '2015.12-2016.10',
         title: '实习前端工程师',
         desc: '云丁公寓管理系统、云丁社区'
     }, {
+        key: 2,
         logo: 'tieba',
         name: '百度贴吧',
         time: '2015.10',
         title: '实习产品经理',
         desc: '直播贴'
     }, {
+        key: 1,
         logo: 'tj',
         name: '太极计算机',
         time: '2015.6-2015.9',
@@ -98,7 +102,7 @@ class About extends React.Component {
                     <p className="center-line"></p>
                     <div className="right">
                         {workData.filter((item, i) => this.props.device === 'wap' || i % 2 === 1).map(item => <WorkBox
-                            {...item} direction="right" key={item.time}
+                            {...item} direction="right" key={item.key}
                         />)}
                     </div>
                 </div>

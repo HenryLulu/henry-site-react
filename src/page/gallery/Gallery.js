@@ -64,7 +64,6 @@ export default class extends React.Component {
         return <div className="gallery">
             <div className="gallery-header">
                 <p className="gh-title"> 很久以前，我是个『美工』</p>
-                <p className="gh-desc">现在<br/>『Ｐ图画画』是爱好<br/>『别搞太丑』是本能<br/>『完美还原』是使命</p>
             </div>
             <div id="gallery-wrapper" className="gallery-wrapper"></div>
         </div>
