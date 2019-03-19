@@ -1,5 +1,5 @@
 @black: #000;
-@white: #fff;
+@white: #ebe8e5;
 @gold: #b6a269;
 
 .about {
@@ -31,6 +31,42 @@
             }
         }
     }
+    .time-line {
+        display: flex;
+        align-items: stretch;
+        padding: .4rem;
+        background: @black;
+        .center-line {
+            position: relative;
+            width: .04rem;
+            background: @gold;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                left: -.09rem;
+                display: block;
+                width: .22rem;
+                height: .22rem;
+                border-radius: 50%;
+                background: @gold;
+            }
+            &:before {
+                top: -.09rem;
+            }
+            &:after {
+                bottom: -.09rem;
+            }
+        }
+        .left {
+            flex-grow: 1;
+            padding-top: .3rem;
+        }
+        .right {
+            flex-grow: 1;
+            padding-top: .7rem;
+        }
+    }
     .edu {
         .left {
             @media screen and (max-width: 450px) {
@@ -41,6 +77,62 @@
         }
         .right {
             padding: .5rem 0;
+        }
+    }
+}
+
+.time-line-box {
+    display: flex;
+    margin-bottom: .6rem;
+    color: @gold;
+    &.left {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+    .line {
+        width: .34rem;
+        height: .04rem;
+        margin-top: .3rem;
+        background: @gold;
+    }
+    .logo {
+        width: .7rem;
+        height: .66rem;
+        border-radius: .12rem;
+        background-color: @white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: .5rem auto;
+        &.baidu {
+            background-image: url('./img/baidu.png');
+        }
+        &.tieba {
+            background-image: url('./img/tieba.png');
+        }
+        &.dd {
+            background-image: url('./img/dd.png');
+        }
+        &.tj {
+            background-image: url('./img/tj.png');
+        }
+    }
+    .content-wrapper {
+        margin: 0 .26rem;
+        .name {
+            line-height: .4rem;
+            font-size: .3rem;
+            color: @gold;
+        }
+        .time {
+            margin-bottom: .1rem;
+            line-height: .26rem;
+            font-size: .16rem;
+            color: @gold;
+        }
+        .desc {
+            line-height: .19rem;
+            font-size: .14rem;
+            color: @white;
         }
     }
 }
