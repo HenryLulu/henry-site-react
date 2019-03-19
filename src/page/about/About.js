@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Link} from "react-router-dom";
+import {connect} from 'react-redux';
 
 import './About.less';
 
@@ -31,7 +32,10 @@ const workData = [
     }
 ];
 
-export default class extends React.Component {
+@connect(store => ({
+    device: store.device
+}))
+class About extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -86,15 +90,15 @@ export default class extends React.Component {
                     )}
                 </div>
                 <div className="time-line">
-                    <div className="left">
+                    {this.props.device === 'pc' && <div className="left">
                         {workData.filter((item, i) => i % 2 === 0).map(item => <WorkBox
                             {...item} direction="left"
                         />)}
-                    </div>
+                    </div>}
                     <p className="center-line"></p>
                     <div className="right">
-                        {workData.filter((item, i) => i % 2 === 1).map(item => <WorkBox
-                            {...item} direction="right"
+                        {workData.filter((item, i) => this.props.device === 'wap' || i % 2 === 1).map(item => <WorkBox
+                            {...item} direction="right" key={item.time}
                         />)}
                     </div>
                 </div>
@@ -128,3 +132,5 @@ const WorkBox = props => <div className={`time-line-box ${props.direction}`}>
         <p className="desc">{props.desc}</p>
     </div>
 </div>
+
+export default About;

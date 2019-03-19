@@ -37,6 +37,7 @@
         padding: .4rem;
         background: @black;
         .center-line {
+            flex-shrink: 0;
             position: relative;
             width: .04rem;
             background: @gold;
@@ -88,6 +89,14 @@
     &.left {
         flex-direction: row-reverse;
         text-align: right;
+        .content-wrapper {
+            margin-right: .26rem;
+        }   
+    }
+    &.right {
+        .content-wrapper {
+            margin-left: .26rem;
+        }
     }
     .line {
         width: .34rem;
@@ -96,6 +105,7 @@
         background: @gold;
     }
     .logo {
+        flex-shrink: 0;
         width: .7rem;
         height: .66rem;
         border-radius: .12rem;
@@ -117,7 +127,6 @@
         }
     }
     .content-wrapper {
-        margin: 0 .26rem;
         .name {
             line-height: .4rem;
             font-size: .3rem;

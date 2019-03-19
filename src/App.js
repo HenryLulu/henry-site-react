@@ -12,9 +12,24 @@ import Article from './page/article/Aritcle';
 import Gallery from './page/gallery/Gallery';
 import Factory from './page/factory/factory';
 
+import {device} from './actions/app/device';
+
 import './App.less';
 
 export default class App extends React.Component {
+
+    componentDidMount() {
+        const {dispatch} = store;
+        dispatch(device());
+        window.onresize = () => {
+            dispatch(device());
+        }
+    }
+
+    componentWillUnmount() {
+        window.onresize = null;
+    }
+
     render() {
         return (
             <Router>

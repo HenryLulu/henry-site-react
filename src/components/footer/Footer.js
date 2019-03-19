@@ -6,7 +6,7 @@ export default () => (
         <p className="top" onClick={() => {window.scrollTo(0, 0)}}>
             <i className="anticon icon-up-square-o"></i>
         </p>
-        <div class="logo"></div>
+        <div className="logo"></div>
         <p className="more">CONNECT WITH ME</p>
         <p className="email">Email: why318why@gmail.com</p>
         <div className="icons">
