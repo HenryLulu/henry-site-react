@@ -2,6 +2,8 @@ import React from 'react';
 import {Route, Link} from "react-router-dom";
 import {connect} from 'react-redux';
 
+import Cloud from './components/Cloud';
+
 import './About.less';
 
 const workData = [
@@ -18,7 +20,7 @@ const workData = [
         name: '云丁智能(D轮)',
         time: '2015.12-2016.10',
         title: '实习前端工程师',
-        desc: '云丁公寓管理系统、云丁社区'
+        desc: '公寓管理Saas、设备管理Saas、官网、社区'
     }, {
         key: 2,
         logo: 'tieba',
@@ -106,10 +108,11 @@ class About extends React.Component {
                         />)}
                     </div>
                 </div>
+                <Cloud />
                 <div className="block-2-col edu">
                     <div className="col left"></div>
                     <div className="col right">
-                        <p className="text-topic">我的大学</p>
+                        <p className="text-topic">教育经历</p>
                         <p className="text-title">北京科技大学(本硕)</p>
                         <p className="text-topic">硕士</p>
                         <p className="text-title-small">软件工程</p>
