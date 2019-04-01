@@ -90,9 +90,8 @@ class About extends React.Component {
                                 本科做过几年业余设计，包揽学院和校园网站的大部分设计工作，有基本的审美能力，有耐心还原设计稿。<br/>
                                 性格开朗，现在也负责组里的吃喝玩乐。
                             </p> */}
-                            <p className="text">后来啊，饿且馋，他爱上了写代码，啃了很多书，成了烟酒僧，当上一个稳“重”的程序员。
-                                <br/>这个胖子，脚印更深地追求产品开发的“艺术”。
-                            </p>
+                            <p className="text">后来啊，饿且馋，他爱上了写代码，啃了很多书，成了烟酒僧，当上一个稳“重”的程序员。</p>
+                            <p className="text">现在这个胖子，脚印更深地追求着产品开发的“艺术”。</p>
                             <p className="btn" onClick={this.nextPage}>了解了</p>
                         </div>
                     )}
