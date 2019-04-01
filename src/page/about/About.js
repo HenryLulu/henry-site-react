@@ -77,8 +77,8 @@ class About extends React.Component {
                                 前端是我所爱，有扎实的前端基础。接触较广，当前技术栈：ES6 CSS3 React webpack FIS jQuery nodejs。<br/>
                                 曾是个能当正式员工用的实习生，现在是个靠谱高效的正式员工，时常专注到废寝忘食。
                             </p> */}
-                            <p className="text">瘦就是瘦</p>
-                            <h1 className="title link" onClick={this.nextPage}>现在呢</h1>
+                            <p className="text">7年前的夏天，那个穿细腿裤的男孩，P的一手好海报。他上蹿下跳，在活动带节奏，给项目出点子。</p>
+                            <h1 className="title link" onClick={this.nextPage}>后来呢</h1>
                         </div>
                     )}
                     {this.state.headpage === 3 && (
@@ -90,7 +90,9 @@ class About extends React.Component {
                                 本科做过几年业余设计，包揽学院和校园网站的大部分设计工作，有基本的审美能力，有耐心还原设计稿。<br/>
                                 性格开朗，现在也负责组里的吃喝玩乐。
                             </p> */}
-                            <p className="text">胖就是胖</p>
+                            <p className="text">后来啊，饿且馋，他爱上了写代码，啃了很多书，成了烟酒僧，当上一个稳“重”的程序员。
+                                <br/>这个胖子，脚印更深地追求产品开发的“艺术”。
+                            </p>
                             <p className="btn" onClick={this.nextPage}>了解了</p>
                         </div>
                     )}
@@ -112,7 +114,7 @@ class About extends React.Component {
                 <div className="block-2-col edu">
                     <div className="col left"></div>
                     <div className="col right">
-                        <p className="text-topic">教育经历</p>
+                        <p className="text-topic">原产地</p>
                         <p className="text-title">北京科技大学(本硕)</p>
                         <p className="text-topic">硕士</p>
                         <p className="text-title-small">软件工程</p>

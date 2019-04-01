@@ -73,7 +73,7 @@ export default class Compo extends React.Component {
 
     render() {
         return <div className="about-cloud">
-            <p className="text-title">相关技术</p>
+            {/* <p className="text-title">功能点</p> */}
             <div className="about-cloud-inner">
                 <p className="about-cloud-canvas"></p>
             </div>
