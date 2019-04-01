@@ -77,7 +77,7 @@ class About extends React.Component {
                                 前端是我所爱，有扎实的前端基础。接触较广，当前技术栈：ES6 CSS3 React webpack FIS jQuery nodejs。<br/>
                                 曾是个能当正式员工用的实习生，现在是个靠谱高效的正式员工，时常专注到废寝忘食。
                             </p> */}
-                            <p className="text">7年前的夏天，那个穿细腿裤的男孩，P的一手好海报。他上蹿下跳，在活动带节奏，给项目出点子。</p>
+                            <p className="text">7年前的夏天，那个穿细腿裤的男孩，P的一手好图，总戳CSSer的屏幕。他上蹿下跳，在活动带节奏，给项目出点子。</p>
                             <h1 className="title link" onClick={this.nextPage}>后来呢</h1>
                         </div>
                     )}
