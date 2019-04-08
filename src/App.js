@@ -24,6 +24,13 @@ export default class App extends React.Component {
         window.onresize = () => {
             dispatch(device());
         }
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d3ac0b8e94061a8eea281bfd104926e9";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
     }
 
     componentWillUnmount() {
