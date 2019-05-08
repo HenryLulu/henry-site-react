@@ -7,7 +7,7 @@ import {getBloglist} from '../../actions/blog/bloglist';
 
 import Boxcontainer from '../../components/boxcontainer/Boxcontainer';
 
-import './Home.less';
+import styles from './Home.module.less';
 import Boxblog from '../../components/boxblog/Boxblog';
 import Boxcode from '../../components/boxcode/Boxcode';
 import Loading from '../../components/loading/Loading';
@@ -39,12 +39,12 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div className="home">
-                <div className="head">
-                    <h1 className="l1">王宏宇</h1>
-                    <h1 className="l2">NOT ONLY A CODER</h1>
-                    <p className="l3">热衷于前端，不止于代码，专注于效率，执着于体验</p>
-                    <h3 className="l4 gold">百度前端工程师</h3>
+            <div className={styles.home}>
+                <div className={styles.head}>
+                    <h1 className={styles.l1}>王宏宇</h1>
+                    <h1 className={styles.l2}>NOT ONLY A CODER</h1>
+                    <p className={styles.l3}>热衷于前端，不止于代码，专注于效率，执着于体验</p>
+                    <h3 className={`${styles.l4} gold`}>百度前端工程师</h3>
                     <div className="btn-wrapper">
                         <Link to="/about">
                             <p className="btn btn-en">MORE ABOUT ME</p>
@@ -58,7 +58,7 @@ class Home extends React.Component {
                         onRetry={this.list}
                     />
                 </div>}
-                <div className="box-area">
+                <div className={styles.boxArea}>
                     <Boxcontainer>
                         {this.props.bloglist.list.slice(0, 4).map(blog => {
                             return (

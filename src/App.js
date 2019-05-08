@@ -16,6 +16,8 @@ import {device} from './actions/app/device';
 
 import './App.less';
 
+/* global _hmt */
+
 export default class App extends React.Component {
 
     componentDidMount() {
@@ -24,7 +26,7 @@ export default class App extends React.Component {
         window.onresize = () => {
             dispatch(device());
         }
-        var _hmt = _hmt || [];
+        window._hmt = [];
         (function() {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?d3ac0b8e94061a8eea281bfd104926e9";

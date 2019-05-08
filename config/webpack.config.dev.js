@@ -36,6 +36,7 @@ const useTypeScript = fs.existsSync(paths.appTsConfig);
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const lessRegex = /\.less$/;
+const lessModuleRegex = /\.module\.less$/;
 
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -291,7 +292,18 @@ module.exports = {
           },
           {
             test: lessRegex,
-            use: getStyleLoaders({ importLoaders: 2 }, 'less-loader'),
+            exclude: lessModuleRegex,
+            use: getStyleLoaders({
+                importLoaders: 2,
+            }, 'less-loader'),
+          },
+          {
+            test: lessModuleRegex,
+            use: getStyleLoaders({
+              importLoaders: 2,
+              modules: true,
+              getLocalIdent: getCSSModuleLocalIdent,
+            }, 'less-loader'),
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
