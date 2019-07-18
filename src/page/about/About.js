@@ -10,10 +10,10 @@ const workData = [
     {
         key: 4,
         logo: 'baidu',
-        name: '百度教育',
+        name: '百度文库/智慧课堂',
         time: '2017.4-至今',
         title: '前端工程师',
-        desc: 'ToB产品、SaaS、智慧课堂、频道专题'
+        desc: '文库toB、频道组件化、Saas、智慧课堂、教育服务化'
     }, {
         key: 3,
         logo: 'dd',
