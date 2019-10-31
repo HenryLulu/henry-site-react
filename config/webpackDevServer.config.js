@@ -88,9 +88,6 @@ module.exports = function(proxy, allowedHost) {
       "/api/github": {
         "target": "https://api.github.com",
         "changeOrigin": true,
-        "headers": {
-          Authorization: "token " + github_access_token
-        },
         "pathRewrite": {
           "^/api/github": ""
         }

@@ -1,4 +1,5 @@
-import get from '../fetch';
+// import get from '../fetch';
+import get from '../fetchJSON';
 
 import {createAction} from 'redux-actions';
 
@@ -15,29 +16,37 @@ const fetchBloglist = (param = {}) => {
         page = 1,
         labels = ''
     } = param;
-    return get('/api/github/repos/HenryLulu/blog/issues', {
-        filter: 'created',
-        per_page,
-        page,
-        labels
+    return get(
+        // '/api/github/repos/HenryLulu/blog/issues'
+        '/blog/articles'
+    , {
+        // filter: 'created',
+        // per_page,
+        // page,
+        // labels
     }).then(res => {
-        return res.map(blog => {
+        if (labels) {
+            res = res.filter(a => a.labels.indexOf(labels) > -1)
+        }
+        res = res.slice((page - 1) * per_page, page * per_page)
+        .map(blog => {
             let tag = blog.created_at.split('T')[0];
             if (blog.labels.length > 0) {
-                tag += ' ' + blog.labels.map(label => label.name).join(' / ');
+                tag += ' ' + blog.labels.join(' / ');
             }
             const body = blog.body || '';
             const descMa = body.match(descReg);
             const imgMa = body.match(imgReg); 
             return {
-                id: blog.number,
+                id: blog.id,
                 tag,
                 title: blog.title,
                 desc: descMa && descMa[1] || '',
-                link: `/article/${blog.number}`,
+                link: `/article/${blog.id}`,
                 img: imgMa && imgMa[1] || ''
             };
         });
+        return res;
     });
 }
 

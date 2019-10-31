@@ -1,4 +1,5 @@
-import get from '../fetch';
+// import get from '../fetch';
+import get from '../fetchJSON';
 
 import {createAction} from 'redux-actions';
 
@@ -8,11 +9,16 @@ export const getArticle = id => (dispatch, getState) => {
     dispatch(article({
         status: 'loading'
     }));
-    get(`/api/github/repos/HenryLulu/blog/issues/${id}`).then(blog => {
+
+    get(
+        // `/api/github/repos/HenryLulu/blog/issues/${id}`
+        `/blog/articles`
+    ).then(articles => {
         try {
+            const blog = articles.filter(a => a.id === id)[0];
             let tag = blog.created_at.split('T')[0];
             if (blog.labels.length > 0) {
-                tag += ' ' + blog.labels.map(label => label.name).join(' / ');
+                tag += ' ' + blog.labels.join(' / ');
             }
             dispatch(article({
                 ...blog,

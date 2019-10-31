@@ -34,7 +34,7 @@ export default [
         ]
     }, {
         word: 'typescript',
-        value: 2,
+        value: 3,
         projects: [
             '智慧XX'
         ]
@@ -42,7 +42,7 @@ export default [
     // mvvm
     {
         word: 'react',
-        value: 4,
+        value: 5,
         projects: [
             'CRM',
             '代理商系统',
@@ -85,6 +85,17 @@ export default [
             '频道/专题',
             '文库'
         ]
+    },
+    // 跨端
+    {
+        word: 'weex',
+        value: 4
+    }, {
+        word: 'vue',
+        value: 2
+    }, {
+        word: 'thanos',
+        value: 3
     },
     // css
     {

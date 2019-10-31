@@ -8,10 +8,17 @@ import './About.less';
 
 const workData = [
     {
+        key: 5,
+        logo: 'didi',
+        name: '滴滴-小桔车服',
+        time: '2019.8-至今',
+        title: '前端工程师',
+        desc: ''
+    }, {
         key: 4,
         logo: 'baidu',
         name: '百度文库/智慧课堂',
-        time: '2017.4-至今',
+        time: '2017.4-2019.8',
         title: '前端工程师',
         desc: '文库toB、频道组件化、Saas、智慧课堂、教育服务化'
     }, {
