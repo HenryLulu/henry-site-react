@@ -1,5 +1,6 @@
 {
   "name": "henry-site-react",
+  "homepage": "https://henrylulu.github.io/henry-site-react/build",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

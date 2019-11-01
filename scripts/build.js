@@ -108,13 +108,14 @@ checkBrowsers(paths.appPath, isInteractive)
       );
 
       // henry: move buided files to root path
-      const files = fs.readdirSync(paths.appBuild);
-      files.forEach(file => {
-        fs.rename(
-          paths.appBuild + '/' + file,
-          paths.appPath + '/' + file
-        )
-      });
+      // const files = fs.readdirSync(paths.appBuild);
+      // files.forEach(file => {
+      //   fs.rename(
+      //     paths.appBuild + '/' + file,
+      //     paths.appPath + '/' + file
+      //   )
+      // });
+      fs.rename(paths.appPath + '/build/index.html', paths.appPath + '/index.html');
     },
     err => {
       console.log(chalk.red('Failed to compile.\n'));
