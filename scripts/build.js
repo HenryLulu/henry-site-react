@@ -106,6 +106,15 @@ checkBrowsers(paths.appPath, isInteractive)
         buildFolder,
         useYarn
       );
+
+      // henry: move buided files to root path
+      const files = fs.readdirSync(paths.appBuild);
+      files.forEach(file => {
+        fs.rename(
+          paths.appBuild + '/' + file,
+          paths.appPath + '/' + file
+        )
+      });
     },
     err => {
       console.log(chalk.red('Failed to compile.\n'));
