@@ -1,5 +1,4 @@
-// import get from '../fetch';
-import get from '../fetchJSON';
+import get from '../fetch';
 
 import {createAction} from 'redux-actions';
 

@@ -1,5 +1,4 @@
-// import get from '../fetch';
-import get from '../fetchJSON';
+import get from '../fetch';
 
 import {createAction} from 'redux-actions';
 
@@ -11,8 +10,7 @@ export const getArticle = id => (dispatch, getState) => {
     }));
 
     get(
-        // `/api/github/repos/HenryLulu/blog/issues/${id}`
-        `/blog/articles`
+        `/api/github/repos/HenryLulu/blog/issues/${id}`
     ).then(articles => {
         try {
             const blog = articles.filter(a => a.id === id)[0];

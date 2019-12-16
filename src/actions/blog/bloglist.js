@@ -1,5 +1,4 @@
-// import get from '../fetch';
-import get from '../fetchJSON';
+import get from '../fetch';
 
 import {createAction} from 'redux-actions';
 
@@ -17,13 +16,12 @@ const fetchBloglist = (param = {}) => {
         labels = ''
     } = param;
     return get(
-        // '/api/github/repos/HenryLulu/blog/issues'
-        '/blog/articles'
+        '/api/github/repos/HenryLulu/blog/issues'
     , {
-        // filter: 'created',
-        // per_page,
-        // page,
-        // labels
+        filter: 'created',
+        per_page,
+        page,
+        labels
     }).then(res => {
         if (labels) {
             res = res.filter(a => a.labels.indexOf(labels) > -1)
